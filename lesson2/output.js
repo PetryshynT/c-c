@@ -11,3 +11,4 @@ const sum = a + b;
 // console.info("I can print some information");
 //error
 // console.error("I can inform about an error");
+; 
