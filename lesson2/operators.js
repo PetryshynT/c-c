@@ -18,4 +18,10 @@ let c = 60;
 // c -= a; // may read like c=c-a
 console.log(c);
 // c += a;
-c += b;
+// c += b;
+
+// string operation
+let text1 = "John";
+let text2 = "Doe";
+let text3 = text1 + " " + text2;
+console.log(text3); 
