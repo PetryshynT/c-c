@@ -4,7 +4,7 @@ let snake_case = 2;
 let kebab-case = 3;
 
 
-типи зміниих
+
 var name0 = 'Taras';
 let name1 = 'Olha';
 let name2 = 'Zinoviy';
