@@ -36,18 +36,20 @@
 
 const client = "Taras Petryshyn";
 const clientBD = true;
-const clientWithUsDay = 1;
+const clientWithUsDay = 3; // коли значення як нуль, то код не працює
+const requiredCD = 1;
 const sale1 = "20%";
 const sale2 = "35%";
 const bSale = "45%";
 
-if (clientWithUsDay <= 120) {
+if (clientWithUsDay <= 120 && clientWithUsDay >= requiredCD) {
     console.log(client + " your sale is " + sale1);
 } else if (clientWithUsDay > 120) {
     console.log(client + " your sale is " + sale2);
-} else if (clientBD = true) {   // як перевірити день народження ?
+} else if (bSale) {   // як перевірити день народження ?
     console.log("Dear " + client + "in your birthday your sale is " + bSale);
     } else {
-        console.log("Something went wrong");   
+        console.log("Something went wrong");  //  не знаю як зробити перевірку, щоь замість чисел були букви 
 }
+
 
