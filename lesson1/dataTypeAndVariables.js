@@ -136,3 +136,4 @@ console.log(val.charAt(val.length - 1));
 console.log(val.substring(2, 5));
 
 console.log(val.indexOf("ll")); // повертає номер індексу за яким розташовані букви
+
