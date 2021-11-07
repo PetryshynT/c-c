@@ -5,6 +5,7 @@
  властивостей у сценаріях JavaScript можлива або за назвами, або за номерами.
 */
 
+
 // з лекції
 
 //dog object
@@ -28,7 +29,7 @@ dog.speak()
 ================================================================================================
 */
 
-// create with an object literal.За допомогою літералів.треба вказати змінні та методи в обєкті
+// create with an object literal.За допомогою літералів({} і значенння з ключами називаються літераламт).треба вказати змінні та методи в обєкті
 const dog1 = { };
 console.log(dog);
 
@@ -191,7 +192,7 @@ Tar.printInroducion();
 Домашнє завдання. створити 10 обєктів і змінити їх. Також потрібно використовувати умови
 =================================================================================================
 */
-// #1
+//1
 const car = {
     make: "Peugeot",
     type: 206,
@@ -200,7 +201,7 @@ const car = {
 car.typeOfFuel = "S";
 console.log(car);
 
-// #2
+//2
 const marin = {};
 marin.name = "marinFourCorners";
 marin.price = 2800;
@@ -212,20 +213,19 @@ if (marin.amount < 1){
 
 console.log(marin);
 
-// #3
-// const phone = new Object;
-// phone.osLastVersion = " ";
-// phone.make = "apple";
+// 3
+const phone = new Object;
+phone.osLastVersion = " ";
+phone.make = "sumsung";
 
-// if (phone.make == "google") {
-//     phone["osLastVersion"] = "android12";
-// } else if (phone.make == "apple") {
-//     phone["osLastVersion"] = "ios 15";
-// } else (phone.make !== "google" || phone.make !== "apple") {
-//     phone["osLastVersion"] = "see in the settings of your phone";
-// }
-// console.log(phone);
-
+if (phone.make == "apple") {
+    phone["osLastVeersion"] = "ios15";
+} else if (phone.make == "google") {
+    phone["osLastVersion"] = "android 12";
+} else {
+    phone["osLastVersion"] = "see in the settings";
+}
+console.log(phone);
 
 // #4
 const houseMaterial = {
@@ -237,8 +237,108 @@ houseMaterial.roof = "tiling";
 delete houseMaterial.walls;
 console.log(houseMaterial);
 
-//#5
+//5
+const cat = {
+    name: "Marty",
+    age:1,
+    color: "grey",
+    breed: "n/a",
+    vaccination: "don't remember",
+}
+cat.needToVisitVeterenarian = " ";
+
+if (cat.vaccination == "no") {
+    cat["needToVisitVeterenarian"] = "Visit a veterenarian as soon as possible"
+} else if (cat.vaccination == "yes") {
+    cat["needToVisitVeterenarian"] = "You're great, the cat is vaccinated, so you may stay at home"
+} else {
+    cat["needToVisitVeterenarian"] = "Please enter 'yes' or 'no'";
+}
+console.log(cat);
+
+//6
+const Ukraine = {
+   language: "Bolgarian",
+    regionQuantity: 24,
+    capaital: "Lviv",
+    neigboringCountry: "Poland" 
+}
+Ukraine["population"] = "44.13 million";
+Ukraine.neigboringCountry = "Poland, Slovakia, Hangary, Romania, Moldova, Russia, Belarus" 
+if (Ukraine.capital != "Kyiv") {
+    Ukraine["capaital"] = "Kyiv";
+}  
+if (Ukraine.language != "Ukrainian") {
+    Ukraine["language"] = "Ukrainian";
+}
+
+console.log(Ukraine);
+
+//7
+const owdMoney = {
+    Ivan: 20,
+    whooOwed: "",
+    whooReturned: ""
+}
+owdMoney.Oleh = 250;
+owdMoney.Olena = 150;
+owdMoney.Olena += 30;
+owdMoney.Ivan -= 100;
+if ( owdMoney.Ivan > 1) {   // тут перелічити всхі боржників і записати у відповідні значення ключів whooOwed та whooReturned не вдалося, але виявив, що записується лише одне значення(одне ім*я боржника)
+     owdMoney["whooOwed"] = "Ivan";
+}
+else if (owdMoney.Ivan <1) {
+    owdMoney["whooReturned"] = "Ivan";
+}
+console.log(owdMoney);
+
+//8
+const table = new Object();
+table.material = "wood";
+table.tableLegs = 4;
+table.form =  "rectangular"
+table.year = 1997;
 
 
+table.material = "steel";
+delete table.year;
+console.log(table);
 
+//9 
+const chair = Object.create(table);
 
+chair.material = "steel";
+chair.year = 2000;
+chair.color = "yellow";
+
+if (chair.year != 2017) {
+    chair["year"] = "2017"
+}
+
+console.log(chair);
+console.log(chair.valueOf());
+console.log(Object.keys(chair));
+
+//10
+const worldWar = {
+    war1:{
+        name: "World war I",
+        start:"",
+        end: 1919
+    }, 
+    war2: {
+        name: "World war II",
+        start: 1939,
+        end: ""
+    },
+    anyWar:{
+        conclussion: ""
+    }
+}
+
+    
+worldWar.war1.start = 1914;
+worldWar.war2.end = 1945;
+worldWar.anyWar.conclussion = "War does not bring good";
+worldWar.anyWar.solution = "Let's talk and not fight";
+console.log(worldWar);
